@@ -19,17 +19,16 @@ gemini --version
 
 You can install these skills directly from your terminal using the Gemini CLI.
 
-### Install the Python Modern Skill
 To install all available skills:
 
 ```bash
 gemini skills install https://github.com/acariman/gemini-cli-skills.git
 ```
 
-To install specifically one of them, such as the Python developer skill:
+To install specifically one of them, such as the Python developer skill, in a particular scope:
 
 ```bash
-gemini skills install https://github.com/acariman/gemini-cli-skills.git --path code-python  --scope workspace
+gemini skills install https://github.com/acariman/gemini-cli-skills.git --path code-python --scope workspace
 ```
 
 ### Other useful commands
@@ -47,10 +46,10 @@ This repository follows the **Agent Skills Open Standard**. Each folder represen
 gemini-cli-skills
 ├── LICENSE
 ├── README.md
-├── skill-name-A/           # Name of the skill
+├── skill-a/           # Name of the skill
 │   ├── SKILL.md            # REQUIRED: Metadata and Instructions
 │   ├── scripts/            # OPTIONAL: Executable scripts (bash, python, etc.)
 │   └── assets/             # OPTIONAL: Templates, documents, or static files
-└── skill-name-B/
+└── skill-b/
     └── SKILL.md
 ```
