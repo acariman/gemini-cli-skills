@@ -26,6 +26,8 @@ Use these libraries by default when no conflicting dependency exists:
 | **API Framework** | **FastAPI** | Use for web APIs. Utilize Pydantic models. |
 | **CLI Framework** | **Typer** | Use for command-line interface tools. |
 | **Database/ORM** | **SQLModel** | For DB interactions. Ensure asyncio compatibility. |
+| **Data Processing** | **Polars** | Prefer over Pandas for performance. Use Lazy API (`.lazy()`) for large datasets. |
+| **Serialization** | **PyArrow** | Use for Parquet files and memory interchange. |
 | **Configuration** | **pydantic-settings** | Use `BaseSettings` to manage environment variables. |
 | **Linter/Formatter** | **Ruff** | Assume strict linting rules. Suggest `ruff check` or `ruff format`. |
 
