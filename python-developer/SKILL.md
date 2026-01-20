@@ -70,3 +70,13 @@ Use these libraries by default when no conflicting dependency exists:
     * **Naming Convention:** `filename.example.extension` (e.g., `config.example.yaml`, `settings.example.toml`).
     * **Forbidden:** Do NOT use `filename.ext.example` (e.g., `config.yaml.example`).
     * **Reasoning:** Placing `.example` *before* the final extension ensures IDEs apply correct syntax highlighting automatically.
+
+## 🧪 Design for Testability
+
+**CRITICAL INSTRUCTION:** Write code that is easy to test as much as possible, without comprimising the simplicity of the workflow.
+
+1.  **Dependency Injection:** Avoid instantiate heavy dependencies (Database, API Clients) directly inside functions. Try to pass them as arguments.
+    * *Bad:* `def process(): client = httpx.Client(); ...` (Hard to mock)
+    * *Good:* `def process(client: httpx.Client): ...` (Easy to pass a mock)
+2.  **Pure Functions:** Separate logic from side effects. Try to keep business logic in pure functions that return values rather than modifying global state.
+3.  **Small Units:** If a function does more than one thing, break it down. Complex functions require complex tests.
